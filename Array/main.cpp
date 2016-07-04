@@ -10,6 +10,8 @@
 #include "Array.hpp"
 #include "Iterator.hpp"
 #include "ZLinkedList.hpp"
+#include "ZStack.hpp"
+#include "ZQueue.hpp"
 using namespace ZTemplate;
 
 class Student {
@@ -24,6 +26,23 @@ private:
 };
 
 int main(int argc, const char * argv[]) {
+    
+    
+    std::cout << "===============array==============" << std::endl;
+    ZArray<Student> *array = new ZArray<Student>;
+    array->push_back(Student("zz", 19));
+    array->push_back(Student("ee", 20));
+    Iterator<Student> &it = array->iterator();
+    while (it.hasNext()) {
+        it.data().display();
+        it++;// 在重载中，有使用next()方法，则测试该方法即可
+    }
+    std::cout << " length: " << array->length() << std::endl;
+    array->at(0).display();
+    array->pop(0).display();
+    std::cout << "    after length:" << array->length() << std::endl; // 在pop中，有对remove的调用，则只覆盖该方法即可
+    
+    std::cout << "=================linkedlist==================" << std::endl;
     
     ZLinkedList<Student> list;
     std::cout << "start: " << list.length() << std::endl;
@@ -49,5 +68,31 @@ int main(int argc, const char * argv[]) {
         (*iterator)++;
     }
     std::cout << "--------------------" << std::endl;
+    
+    ZStack<Student> stack;
+    stack.push(Student("aa", 14));
+    stack.push(Student("bb", 18));
+    stack.push(Student("cc", 15));
+    stack.push(Student("dd", 16));
+    std::cout << "count : " << stack.count() << std::endl;
+    while (!stack.empty()) {
+        stack.popup().display();
+        std::cout << "---------------------" << std::endl;
+    }
+    
+    
+    std::cout << "================队列===============" << std::endl;
+    
+    ZQueue<Student> queue;
+    queue.enqueue(Student("aa", 14));
+    queue.enqueue(Student("bb", 15));
+    queue.enqueue(Student("cc", 16));
+    queue.enqueue(Student("dd", 17));
+    queue.enqueue(Student("ee", 18));
+    std::cout << "count : " << queue.count() << std::endl;
+    while (!queue.empty()) {
+        queue.dequeue().display();
+        std::cout << "---------------------" << std::endl;
+    }
     return 0;
 }

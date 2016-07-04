@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01B6607B1D2A6AC5008E0440 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B6607A1D2A6AC5008E0440 /* main.cpp */; };
 		01B660841D2A6B03008E0440 /* Sequence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B660821D2A6B03008E0440 /* Sequence.cpp */; };
 		01B660881D2A6B20008E0440 /* Iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B660861D2A6B20008E0440 /* Iterator.cpp */; };
 		01B6608B1D2A6B42008E0440 /* Array.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B660891D2A6B42008E0440 /* Array.cpp */; };
 		01B660911D2A6BB2008E0440 /* ZLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B6608F1D2A6BB2008E0440 /* ZLinkedList.cpp */; };
+		01B660A01D2A7EAD008E0440 /* ZQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B6609E1D2A7EAD008E0440 /* ZQueue.cpp */; };
+		01B660A31D2A7EB4008E0440 /* ZStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B660A11D2A7EB4008E0440 /* ZStack.cpp */; };
+		01B660A51D2A7ED0008E0440 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01B660A41D2A7ED0008E0440 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		01B660771D2A6AC5008E0440 /* Array */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Array; sourceTree = BUILT_PRODUCTS_DIR; };
-		01B6607A1D2A6AC5008E0440 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		01B660821D2A6B03008E0440 /* Sequence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sequence.cpp; sourceTree = "<group>"; };
 		01B660831D2A6B03008E0440 /* Sequence.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sequence.hpp; sourceTree = "<group>"; };
 		01B660861D2A6B20008E0440 /* Iterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Iterator.cpp; sourceTree = "<group>"; };
@@ -37,6 +38,11 @@
 		01B6608A1D2A6B42008E0440 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 		01B6608F1D2A6BB2008E0440 /* ZLinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZLinkedList.cpp; sourceTree = "<group>"; };
 		01B660901D2A6BB2008E0440 /* ZLinkedList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZLinkedList.hpp; sourceTree = "<group>"; };
+		01B6609E1D2A7EAD008E0440 /* ZQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZQueue.cpp; sourceTree = "<group>"; };
+		01B6609F1D2A7EAD008E0440 /* ZQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZQueue.hpp; sourceTree = "<group>"; };
+		01B660A11D2A7EB4008E0440 /* ZStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZStack.cpp; sourceTree = "<group>"; };
+		01B660A21D2A7EB4008E0440 /* ZStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ZStack.hpp; sourceTree = "<group>"; };
+		01B660A41D2A7ED0008E0440 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +75,11 @@
 		01B660791D2A6AC5008E0440 /* Array */ = {
 			isa = PBXGroup;
 			children = (
+				01B6609D1D2A7E9E008E0440 /* ZQueue */,
+				01B6609C1D2A7E97008E0440 /* ZStack */,
 				01B660851D2A6B0E008E0440 /* Iterator */,
 				01B660811D2A6AEB008E0440 /* Sequence */,
-				01B6607A1D2A6AC5008E0440 /* main.cpp */,
+				01B660A41D2A7ED0008E0440 /* main.cpp */,
 				01B660891D2A6B42008E0440 /* Array.cpp */,
 				01B6608A1D2A6B42008E0440 /* Array.hpp */,
 				01B6608F1D2A6BB2008E0440 /* ZLinkedList.cpp */,
@@ -96,6 +104,24 @@
 				01B660871D2A6B20008E0440 /* Iterator.hpp */,
 			);
 			name = Iterator;
+			sourceTree = "<group>";
+		};
+		01B6609C1D2A7E97008E0440 /* ZStack */ = {
+			isa = PBXGroup;
+			children = (
+				01B660A11D2A7EB4008E0440 /* ZStack.cpp */,
+				01B660A21D2A7EB4008E0440 /* ZStack.hpp */,
+			);
+			name = ZStack;
+			sourceTree = "<group>";
+		};
+		01B6609D1D2A7E9E008E0440 /* ZQueue */ = {
+			isa = PBXGroup;
+			children = (
+				01B6609E1D2A7EAD008E0440 /* ZQueue.cpp */,
+				01B6609F1D2A7EAD008E0440 /* ZQueue.hpp */,
+			);
+			name = ZQueue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,11 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B660A31D2A7EB4008E0440 /* ZStack.cpp in Sources */,
 				01B660881D2A6B20008E0440 /* Iterator.cpp in Sources */,
 				01B6608B1D2A6B42008E0440 /* Array.cpp in Sources */,
+				01B660A01D2A7EAD008E0440 /* ZQueue.cpp in Sources */,
+				01B660A51D2A7ED0008E0440 /* main.cpp in Sources */,
 				01B660911D2A6BB2008E0440 /* ZLinkedList.cpp in Sources */,
 				01B660841D2A6B03008E0440 /* Sequence.cpp in Sources */,
-				01B6607B1D2A6AC5008E0440 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +307,7 @@
 				01B660801D2A6AC5008E0440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

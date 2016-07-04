@@ -116,7 +116,7 @@ namespace ZTemplate {
          * 是否含有下一个元素
          * @return 返回是否有后续元素
          */
-        virtual bool hasNext();
+        virtual bool hasNext() const;
         /**
          * 重置前置++
          */
@@ -220,7 +220,7 @@ ZTemplate::Iterator<T1>& ZTemplate::ZArrayIterator<T1>::next() {
 }
 
 template<class T1>
-bool ZTemplate::ZArrayIterator<T1>::hasNext() {
+bool ZTemplate::ZArrayIterator<T1>::hasNext() const{
     return pointTo < _array->length();
 }
 

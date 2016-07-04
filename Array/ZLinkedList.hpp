@@ -290,11 +290,24 @@ void ZTemplate::ZLinkedList<T>::push_back(const T &val) {
 template<class T>
 T ZTemplate::ZLinkedList<T>::pop(const rank pos) {
     // 节点游标
+    --_length;
+    if (pos == 0) {
+        T data = _list_head->data();
+        ZTemplate::ZLinkedListNode<T> *delNode = _list_head;
+        _list_head = _list_head->nextNode();
+        delete delNode;
+        return data;
+    }
     ZTemplate::ZLinkedListNode<T> *nodePointer = _list_head;
+    ZTemplate::ZLinkedListNode<T> *preNode = nullptr;
     for (int i = 0; i < pos; i++) {
+        preNode = nodePointer;
         nodePointer = nodePointer->nextNode();
     }
-    return nodePointer->data();
+    T data = nodePointer->data();
+    preNode->setNextNode(preNode->nextNode()->nextNode());
+    delete nodePointer;
+    return data;
 }
 
 template<class T>
